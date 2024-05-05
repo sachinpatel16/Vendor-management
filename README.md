@@ -69,3 +69,8 @@ Vendors acknowledge PO
 
 - Run the test suite:
 - python manage.py test
+
+
+#### User Authentication jwt 
+
+- Repositorie : https://github.com/sachinpatel16/Authentication
