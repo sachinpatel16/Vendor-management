@@ -12,17 +12,20 @@ cd project-directory (Vendor-management)
 
 # 2.Create a virtual environment:
 python -m venv mvenv
-source mvenv/bin/activate # For Linux/Mac
-mvenv\Scripts\activate # For Windows
+
+#### For Linux/Mac
+- source mvenv/bin/activate 
+#### For Windows
+- mvenv\Scripts\activate 
 
 # 3.Install dependencies:
 pip install -r requirements.txt
 
 # 4.Database setup:
-python manage.py migrate
-python manage.py makemigrations vendor
-python manage.py migrate vendor
-python manage.py createsuperuser
+- python manage.py migrate
+- python manage.py makemigrations vendor
+- python manage.py migrate vendor
+- python manage.py createsuperuser
 
 #### Usage
 # 1.Start the server:
@@ -30,36 +33,37 @@ python manage.py runserver
 
 # 2.Access API endpoints:
 #### Vendor API: /api/vendor/
-Purchase Order API: /api/purchase_orders/
-Historical Data API: /api/vendor_history/
-Historical Performance API: /api/vendor_history/vh
+
+- Purchase Order API: /api/purchase_orders/
+- Historical Data API: /api/vendor_history/
+- Historical Performance API: /api/vendor_history/vh
 
 #### API Endpoints
-Vendor API
-● POST /api/vendor/: Create a new vendor.
-● GET /api/vendor/: List all vendors.
-● GET /api/vendor/{vendor_id}/: Retrieve a specific vendor's details.
-● PUT /api/vendor/{vendor_id}/: Update a vendor's details.
-● DELETE /api/vendor/{vendor_id}/: Delete a vendor
+#### Vendor API
+- POST /api/vendor/: Create a new vendor.
+- GET /api/vendor/: List all vendors.
+- GET /api/vendor/{vendor_id}/: Retrieve a specific vendor's details.
+- PUT /api/vendor/{vendor_id}/: Update a vendor's details.
+- DELETE /api/vendor/{vendor_id}/: Delete a vendor
 
-● Vendor Performance Endpoint (GET /api/vendor/{vendor_id}/performance)
+- Vendor Performance Endpoint (GET /api/vendor/{vendor_id}/performance)
 
-Purchase Order API
-● POST /api/purchase_orders/: Create a purchase order.
-● GET /api/purchase_orders/: List all purchase orders with an option to filter by vendor.
-● GET /api/purchase_orders/{po_id}/: Retrieve details of a specific purchase order.
-● PUT /api/purchase_orders/{po_id}/: Update a purchase order.
-● DELETE /api/purchase_orders/{po_id}/: Delete a purchase order
+#### Purchase Order API
+- POST /api/purchase_orders/: Create a purchase order.
+- GET /api/purchase_orders/: List all purchase orders with an option to filter by vendor.
+- GET /api/purchase_orders/{po_id}/: Retrieve details of a specific purchase order.
+- PUT /api/purchase_orders/{po_id}/: Update a purchase order.
+- DELETE /api/purchase_orders/{po_id}/: Delete a purchase order
 
 Vendor Performance Evaluation
-● GET /api/vendor/{vendor_id}/performance: Retrieve a vendor's performance metrics
+- GET /api/vendor/{vendor_id}/performance: Retrieve a vendor's performance metrics
 
 Historical Performance API
-GET /api/vendor_history:ALL Data List historical performance for all vendors.
-GET /api/vendor_history/vh/:historical performance Analysis for a vendor.
+- GET /api/vendor_history:ALL Data List historical performance for all vendors.
+- GET /api/vendor_history/vh/:historical performance Analysis for a vendor.
 
 Vendors acknowledge PO
-● GET /api/purchase_orders/{po_id}/acknowledge 
+- GET /api/purchase_orders/{po_id}/acknowledge 
 
 #### Running Tests
 
