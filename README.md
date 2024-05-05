@@ -67,5 +67,5 @@ Vendors acknowledge PO
 
 #### Running Tests
 
-Run the test suite:
-python manage.py test
+- Run the test suite:
+- python manage.py test
